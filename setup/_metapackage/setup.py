@@ -16,6 +16,7 @@ setuptools.setup(
         'odoo-addon-calendar_event_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-calendar_event_type_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-company_dependent_flag>=16.0dev,<16.1dev',
+        'odoo-addon-crm_lost_reason_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-crm_stage_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-crm_tag_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-crm_tag_multi_company_event_crm>=16.0dev,<16.1dev',

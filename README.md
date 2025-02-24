@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [calendar_event_multi_company](calendar_event_multi_company/) | 16.0.1.0.0 |  | This module add multi-company management to calendar events
 [calendar_event_type_multi_company](calendar_event_type_multi_company/) | 16.0.1.0.0 |  | This module add multi-company management to calendar event type
 [company_dependent_flag](company_dependent_flag/) | 16.0.1.0.2 |  | Apply css style to company dependent fields
+[crm_lost_reason_multi_company](crm_lost_reason_multi_company/) | 16.0.1.0.0 |  | This module add multi-company management to crm lost reason
 [crm_stage_multi_company](crm_stage_multi_company/) | 16.0.1.0.0 |  | This module adds support for multi company on crm stage.
 [crm_tag_multi_company](crm_tag_multi_company/) | 16.0.1.0.0 |  | This module add multi-company management to crm tag
 [crm_tag_multi_company_event_crm](crm_tag_multi_company_event_crm/) | 16.0.1.0.0 |  | Ensure multi-company check in event lead rules tag ids
