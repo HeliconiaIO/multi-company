@@ -13,7 +13,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
         <field name="context">{
             "search_default_category_id": [active_id],
             "default_category_id": active_id,
-        }
+            }
         </field>
     </record>
 
@@ -25,7 +25,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
             <tree decoration-info="type == 'view'">
                 <field name="complete_name" />
                 <field name="company_qty" />
-                <field name="type" invisible="1" />
+                <field name="type" column_invisible="1" />
             </tree>
         </field>
     </record>
@@ -34,46 +34,52 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
         <field name="model">res.company.category</field>
         <field name="type">form</field>
         <field name="arch" type="xml">
-            <header />
-            <sheet>
-                <div class="oe_button_box" name="button_box">
-                    <button
-                        class="oe_stat_button"
-                        type="action"
-                        name="%(action_company_category_to_company)d"
-                        icon="fa-list"
-                    >
-                        <field
-                            string="Companies"
-                            name="company_qty"
-                            widget="statinfo"
-                        />
-                    </button>
-                </div>
-                <widget
-                    name="web_ribbon"
-                    title="Archived"
-                    bg_color="bg-danger"
-                    attrs="{'invisible': [('active', '=', True)]}"
-                />
-                <div class="oe_title">
-                    <label class="oe_edit_only" for="name" string="Name" />
-                    <h1><field name="name" /></h1>
-                    <label
-                        class="oe_edit_only"
-                        for="parent_id"
-                        string="Parent Category"
+            <form>
+                <header />
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            class="oe_stat_button"
+                            type="action"
+                            name="%(action_company_category_to_company)d"
+                            icon="fa-list"
+                        >
+                            <field
+                                string="Companies"
+                                name="company_qty"
+                                widget="statinfo"
+                            />
+                        </button>
+                    </div>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        invisible="active"
                     />
-                    <h2><field name="parent_id" /></h2>
-                </div>
+                    <div class="oe_title">
+                        <label class="oe_edit_only" for="name" string="Name" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                        <label
+                            class="oe_edit_only"
+                            for="parent_id"
+                            string="Parent Category"
+                        />
+                        <h2>
+                            <field name="parent_id" />
+                        </h2>
+                    </div>
 
-                <group>
                     <group>
-                        <field name="type" />
-                        <field name="active" invisible="1" />
+                        <group>
+                            <field name="type" />
+                            <field name="active" invisible="1" />
+                        </group>
                     </group>
-                </group>
-            </sheet>
+                </sheet>
+            </form>
         </field>
     </record>
 
