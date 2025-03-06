@@ -22,9 +22,9 @@ class ResCompany(models.Model):
                 if len(users):
                     raise ValidationError(
                         _(
-                            "You can not disable the company %(company_name)s because it is the"
-                            " current company for the following active users:\n\n"
-                            " - %(user_names)s\n\n"
+                            "You can not disable the company %(company_name)s because"
+                            "it is the current company for the following active"
+                            "users:\n\n - %(user_names)s\n\n"
                             " Please change the company of these users, or disable"
                             " them",
                             company_name=company.name,

@@ -15,7 +15,7 @@ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
                     name="web_ribbon"
                     title="Archived"
                     bg_color="bg-danger"
-                    attrs="{'invisible': [('active', '=', True)]}"
+                    invisible="active"
                 />
             </field>
             <field name="parent_id" position="after">
