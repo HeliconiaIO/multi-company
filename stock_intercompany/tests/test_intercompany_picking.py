@@ -1,75 +1,93 @@
 # Copyright 2021 Camptocamp
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests.common import RecordCapturer, TransactionCase
+from odoo import Command
+from odoo.tests.common import RecordCapturer
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestIntercompanyDelivery(TransactionCase):
-    def setUp(self):
-        super().setUp()
-        self.user_demo = self.env["res.users"].create(
+class TestIntercompanyDelivery(BaseCommon):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        company_obj = cls.env["res.company"]
+        cls.company1 = company_obj.create({"name": "Company A"})
+        cls.company2 = company_obj.create({"name": "Company B"})
+        cls.user_demo = cls.env["res.users"].create(
             {
                 "login": "firstnametest",
                 "name": "User Demo",
                 "email": "firstnametest@example.org",
+                "company_id": cls.company1.id,
+                "company_ids": [
+                    Command.link(cls.company1.id),
+                    Command.link(cls.company2.id),
+                ],
                 "groups_id": [
-                    (4, self.env.ref("base.group_user").id),
-                    (4, self.env.ref("stock.group_stock_user").id),
+                    Command.link(cls.env.ref("base.group_user").id),
+                    Command.link(cls.env.ref("stock.group_stock_user").id),
                 ],
             }
         )
-        company_obj = self.env["res.company"]
-        # Create 2 companies and configure intercompany picking type param on them
-        self.company1 = company_obj.create({"name": "Company A"})
-        self.company2 = company_obj.create({"name": "Company B"})
-        self.picking_type_1 = (
-            self.env["stock.picking.type"]
+        cls.picking_type_1 = (
+            cls.env["stock.picking.type"]
             .sudo()
             .search(
                 [
-                    ("company_id", "=", self.company1.id),
+                    ("company_id", "=", cls.company1.id),
                     ("name", "=", "Delivery Orders"),
                 ],
                 limit=1,
             )
         )
-        self.picking_type_2 = (
-            self.env["stock.picking.type"]
+        cls.picking_type_2 = (
+            cls.env["stock.picking.type"]
             .sudo()
             .search(
-                [("company_id", "=", self.company2.id), ("name", "=", "Receipts")],
+                [
+                    ("company_id", "=", cls.company2.id),
+                    ("name", "=", "Receipts"),
+                ],
                 limit=1,
             )
         )
 
-        self.company1.intercompany_in_type_id = self.picking_type_1.id
-        self.company2.intercompany_in_type_id = self.picking_type_2.id
-        # assign both companies to current user
-        self.user_demo.write(
+        cls.company1.intercompany_in_type_id = cls.picking_type_1.id
+        cls.company2.intercompany_in_type_id = cls.picking_type_2.id
+        cls.user_demo.write(
             {
-                "company_id": self.company1.id,
-                "company_ids": [(4, self.company1.id), (4, self.company2.id)],
+                "company_id": cls.company1.id,
+                "company_ids": [
+                    Command.link(cls.company1.id),
+                    Command.link(cls.company2.id),
+                ],
             }
         )
-        # create storable product
-        self.product1 = self.env["product.product"].create(
+        cls.user_demo.partner_id.with_context(
+            allowed_company_ids=[cls.company1.id, cls.company2.id]
+        ).write({})
+
+        cls.product1 = cls.env["product.product"].create(
             {
                 "name": "Product A",
                 "type": "product",
-                "categ_id": self.env.ref("product.product_category_all").id,
+                "categ_id": cls.env.ref("product.product_category_all").id,
                 "qty_available": 100,
             }
         )
-        self.stock_location = (
-            self.env["stock.location"]
+        cls.stock_location = (
+            cls.env["stock.location"]
             .sudo()
-            .search([("name", "=", "Stock"), ("company_id", "=", self.company1.id)])
+            .search(
+                [("name", "=", "Stock"), ("company_id", "=", cls.company1.id)], limit=1
+            )
         )
-        self.uom_unit = self.env.ref("uom.product_uom_unit")
+        cls.uom_unit = cls.env.ref("uom.product_uom_unit")
 
     def test_picking_creation(self):
         stock_location = self.env["stock.location"].search(
-            [("usage", "=", "internal"), ("company_id", "=", self.company1.id)]
+            [("usage", "=", "internal"), ("company_id", "=", self.company1.id)], limit=1
         )
         custs_location = self.env.ref("stock.stock_location_customers")
         custs_location.company_id = False
@@ -93,7 +111,7 @@ class TestIntercompanyDelivery(TransactionCase):
                 "location_dest_id": custs_location.id,
                 "product_id": self.product1.id,
                 "product_uom_id": self.uom_unit.id,
-                "qty_done": 1.0,
+                "quantity": 1.0,
                 "picking_id": picking.id,
             }
         )
@@ -105,12 +123,12 @@ class TestIntercompanyDelivery(TransactionCase):
         self.assertEqual(len(counterpart_picking), 1)
         self.assertEqual(counterpart_picking.counterpart_of_picking_id, picking)
         self.assertEqual(len(counterpart_picking.move_ids), len(picking.move_ids))
-        for cp_move, move in zip(counterpart_picking.move_ids, picking.move_ids):
+        for cp_move, move in zip(counterpart_picking.move_ids, picking.move_ids):  # noqa: B905
             self.assertEqual(cp_move.counterpart_of_move_id, move)
         self.assertEqual(
             len(counterpart_picking.move_line_ids), len(picking.move_line_ids)
         )
-        for cp_line, line in zip(
+        for cp_line, line in zip(  # noqa: B905
             counterpart_picking.move_line_ids, picking.move_line_ids
         ):
             self.assertEqual(cp_line.counterpart_of_line_id, line)

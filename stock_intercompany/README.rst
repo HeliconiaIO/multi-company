@@ -79,6 +79,9 @@ Contributors
 - Alexandre Fayolle <alexandre.fayolle@camptocamp.com>
 - Yannick Vaucher <yannick.vaucher@camptocamp.com>
 - Italo Lopes <italo.lopes@camptocamp.com>
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+
+  - Bhavesh Heliconia
 
 Maintainers
 -----------
