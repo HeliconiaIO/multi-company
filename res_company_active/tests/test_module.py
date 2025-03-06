@@ -8,7 +8,7 @@ from odoo.tests.common import TransactionCase
 
 class TestModule(TransactionCase):
     def setUp(self):
-        super(TestModule, self).setUp()
+        super().setUp()
         self.test_company = self.env.ref("res_company_active.company_test")
         self.main_company = self.env.ref("base.main_company")
         self.demo_user = self.env.ref("base.user_demo")
