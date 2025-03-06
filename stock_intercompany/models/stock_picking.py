@@ -83,7 +83,7 @@ class StockPicking(models.Model):
             if picking.location_dest_id.usage == "customer":
                 counterpart = picking._create_counterpart_picking()
                 counterparts.append((picking, counterpart))
-        res = super(StockPicking, self)._action_done()
+        res = super()._action_done()
         for picking, counterpart in counterparts:
             picking._finalize_counterpart_picking(counterpart)
         return res
