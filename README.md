@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [product_category_inter_company](product_category_inter_company/) | 15.0.1.1.0 |  | Product categories as company dependent
 [product_category_multi_company](product_category_multi_company/) | 15.0.1.0.0 |  | Product Category multi-company
 [product_multi_company](product_multi_company/) | 15.0.1.0.1 |  | Select individually the product template visibility on each company
+[product_multi_company_stock](product_multi_company_stock/) | 15.0.1.1.0 |  | Does not allow to remove company if there is stock or moves in that company
 [product_tax_multicompany_default](product_tax_multicompany_default/) | 15.0.1.0.1 | [![Shide](https://github.com/Shide.png?size=30px)](https://github.com/Shide) | Product Tax Multi Company Default
 [purchase_sale_inter_company](purchase_sale_inter_company/) | 15.0.1.1.1 |  | Intercompany PO/SO rules
 [purchase_sale_stock_inter_company](purchase_sale_stock_inter_company/) | 15.0.1.0.0 |  | Intercompany PO/SO rules with warehouse

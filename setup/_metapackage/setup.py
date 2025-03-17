@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo-addon-product_category_inter_company>=15.0dev,<15.1dev',
         'odoo-addon-product_category_multi_company>=15.0dev,<15.1dev',
         'odoo-addon-product_multi_company>=15.0dev,<15.1dev',
+        'odoo-addon-product_multi_company_stock>=15.0dev,<15.1dev',
         'odoo-addon-product_tax_multicompany_default>=15.0dev,<15.1dev',
         'odoo-addon-purchase_sale_inter_company>=15.0dev,<15.1dev',
         'odoo-addon-purchase_sale_stock_inter_company>=15.0dev,<15.1dev',
