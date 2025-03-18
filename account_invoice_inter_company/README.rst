@@ -50,8 +50,8 @@ Configuration
 To configure this module, you need to go to the menu *Settings > General
 Settings*, go to the tab *Companies / Inter Company OCA features*
 
-You now have access to other options *Intercompany user for invoices*
-and *Invoice Auto Validation*.
+You now have access to other options *Generate Intercompany Invoices*,
+*Intercompany user for invoices* and *Invoice Auto Validation*.
 
 To customize products sharing don't hesitate to override
 \_compute_share_product() in res.company model.
@@ -59,13 +59,13 @@ To customize products sharing don't hesitate to override
 Known issues / Roadmap
 ======================
 
-   - This module cannot be fully used in combination with
-     remove_odoo_entreprise module. If you need both, uninstall
-     remove_odoo_entreprise, complete settings with
-     account_invoice_inter_company and then re-install
-     remove_odoo_entreprise.
-   - Product mapping: would be nice to have a matrix with the products
-     on the left side and on the top row the companies.
+   -  This module cannot be fully used in combination with
+      remove_odoo_entreprise module. If you need both, uninstall
+      remove_odoo_entreprise, complete settings with
+      account_invoice_inter_company and then re-install
+      remove_odoo_entreprise.
+   -  Product mapping: would be nice to have a matrix with the products
+      on the left side and on the top row the companies.
 
 Bug Tracker
 ===========
@@ -89,26 +89,26 @@ Authors
 Contributors
 ------------
 
-- Odoo S.A. (original module inter_company_rules)
-- Andrea Stirpe <a.stirpe@onestein.nl>
-- Adria Gil Sorribes <adria.gil@forgeflow.com>
-- Christopher Ormaza <chris.ormaza@forgeflow.com>
-- \`Akretion <https://www.akretion.com>\`:
+-  Odoo S.A. (original module inter_company_rules)
+-  Andrea Stirpe <a.stirpe@onestein.nl>
+-  Adria Gil Sorribes <adria.gil@forgeflow.com>
+-  Christopher Ormaza <chris.ormaza@forgeflow.com>
+-  \`Akretion <https://www.akretion.com>\`:
 
-  - Chafique Delli <chafique.delli@akretion.com>
-  - Alexis de Lattre <alexis.delattre@akretion.com>
-  - David Beal <david.beal@akretion.com>
+   -  Chafique Delli <chafique.delli@akretion.com>
+   -  Alexis de Lattre <alexis.delattre@akretion.com>
+   -  David Beal <david.beal@akretion.com>
 
-- \`Tecnativa <https://www.tecnativa.com>\`:
+-  \`Tecnativa <https://www.tecnativa.com>\`:
 
-  - Jairo Llopis
-  - David Vidal
-  - Pedro M. Baeza
+   -  Jairo Llopis
+   -  David Vidal
+   -  Pedro M. Baeza
 
-- Isaac Gallart <igallart@puntsistemes.es>
-- \`Komit <https://komit-consulting.com>\`:
+-  Isaac Gallart <igallart@puntsistemes.es>
+-  \`Komit <https://komit-consulting.com>\`:
 
-  - Cuong Nguyen Mtm <cuong.nmtm@komit-consulting.com>
+   -  Cuong Nguyen Mtm <cuong.nmtm@komit-consulting.com>
 
 Maintainers
 -----------
