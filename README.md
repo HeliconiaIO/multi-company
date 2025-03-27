@@ -40,6 +40,7 @@ addon | version | maintainers | summary
 [mail_multicompany](mail_multicompany/) | 16.0.2.0.0 | [![luisg123v](https://github.com/luisg123v.png?size=30px)](https://github.com/luisg123v) | Email Gateway Multi company
 [mail_template_multi_company](mail_template_multi_company/) | 16.0.1.0.0 | [![Olivier-LAURENT](https://github.com/Olivier-LAURENT.png?size=30px)](https://github.com/Olivier-LAURENT) | Mail Template Multi Company
 [mass_mailing_multi_company](mass_mailing_multi_company/) | 16.0.1.0.0 |  | Adds the company_id field to the models mailing.mailing, mailing.list and mailing.contact
+[multicompany_configuration](multicompany_configuration/) | 16.0.1.0.0 |  | Simplify the configuration on multicompany environments
 [partner_account_multicompany_default](partner_account_multicompany_default/) | 16.0.0.1.0 | [![camptocamp](https://github.com/camptocamp.png?size=30px)](https://github.com/camptocamp) | Set a default account for all companies of a partners
 [partner_category_multi_company](partner_category_multi_company/) | 16.0.1.0.0 |  | This module add multi-company management to partner categories
 [partner_category_multi_company_account](partner_category_multi_company_account/) | 16.0.1.0.0 |  | Multi-company check in Matching partner categories
