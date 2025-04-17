@@ -4,9 +4,8 @@
 
 {
     "name": "Account Period Lock Date - Multi-Company",
-    "summary": "Provides a company tree view to manage"
-    " accounting lock dates",
-    "version": "12.0.1.0.0",
+    "summary": "Provides a company tree view to manage accounting lock dates",
+    "version": "16.0.1.0.0",
     "category": "Accounting & Finance",
     "author": "GRAP, Odoo Community Association (OCA)",
     "maintainers": ["legalsylvain"],
