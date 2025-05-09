@@ -25,7 +25,7 @@ addon | version | maintainers | summary
 [account_move_change_company](account_move_change_company/) | 16.0.1.0.0 |  | Allow to change company of account moves
 [account_multicompany_easy_creation](account_multicompany_easy_creation/) | 16.0.1.0.0 |  | This module adds a wizard to create companies easily
 [account_reconcile_model_multicompany_propagate](account_reconcile_model_multicompany_propagate/) | 16.0.1.2.0 | [![EmilioPascual](https://github.com/EmilioPascual.png?size=30px)](https://github.com/EmilioPascual) | Propagate account reconcile model in companies with same chart template
-[base_multi_company](base_multi_company/) | 16.0.2.0.0 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | Provides a base for adding multi-company support to models.
+[base_multi_company](base_multi_company/) | 16.0.3.0.0 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | Provides a base for adding multi-company support to models.
 [calendar_event_multi_company](calendar_event_multi_company/) | 16.0.1.0.0 |  | This module add multi-company management to calendar events
 [calendar_event_type_multi_company](calendar_event_type_multi_company/) | 16.0.1.0.0 |  | This module add multi-company management to calendar event type
 [company_dependent_flag](company_dependent_flag/) | 16.0.1.0.2 |  | Apply css style to company dependent fields
@@ -52,7 +52,7 @@ addon | version | maintainers | summary
 [product_category_company](product_category_company/) | 16.0.1.1.0 |  | Product categories as company dependent
 [product_category_company_favorite](product_category_company_favorite/) | 16.0.1.0.1 | [![legalsylvain](https://github.com/legalsylvain.png?size=30px)](https://github.com/legalsylvain) | Possilibity to set favorite product categories per company
 [product_default_code_res_company_code](product_default_code_res_company_code/) | 16.0.1.0.0 |  | Generate product default code based on sequence defined by company, prefixed by company code
-[product_multi_company](product_multi_company/) | 16.0.1.0.2 |  | Select individually the product template visibility on each company
+[product_multi_company](product_multi_company/) | 16.0.2.0.0 |  | Select individually the product template visibility on each company
 [product_tax_multicompany_default](product_tax_multicompany_default/) | 16.0.1.0.2 | [![Shide](https://github.com/Shide.png?size=30px)](https://github.com/Shide) | Product Tax Multi Company Default
 [purchase_sale_container_deposit_inter_company](purchase_sale_container_deposit_inter_company/) | 16.0.1.0.2 |  | Add compatibility between OCA product_packaging_container_deposit and purchase_sale_inter_company
 [purchase_sale_inter_company](purchase_sale_inter_company/) | 16.0.1.1.3 |  | Intercompany PO/SO rules
