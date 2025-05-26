@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [account_invoice_inter_company](account_invoice_inter_company/) | 17.0.1.1.1 |  | Intercompany invoice rules
 [account_multicompany_easy_creation](account_multicompany_easy_creation/) | 17.0.1.0.0 |  | This module adds a wizard to create companies easily
 [base_multi_company](base_multi_company/) | 17.0.1.0.1 | [![pedrobaeza](https://github.com/pedrobaeza.png?size=30px)](https://github.com/pedrobaeza) | Provides a base for adding multi-company support to models.
+[crm_tag_multi_company](crm_tag_multi_company/) | 17.0.1.0.0 |  | This module add multi-company management to crm tag
 [mail_multicompany](mail_multicompany/) | 17.0.1.0.0 | [![luisg123v](https://github.com/luisg123v.png?size=30px)](https://github.com/luisg123v) | Email Gateway Multi company
 [partner_multi_company](partner_multi_company/) | 17.0.1.0.1 |  | Select individually the partner visibility on each company
 [product_multi_company](product_multi_company/) | 17.0.1.0.0 |  | Select individually the product template visibility on each company
