@@ -54,6 +54,7 @@ addon | version | maintainers | summary
 [product_default_code_res_company_code](product_default_code_res_company_code/) | 16.0.1.0.0 |  | Generate product default code based on sequence defined by company, prefixed by company code
 [product_multi_company](product_multi_company/) | 16.0.2.0.0 |  | Select individually the product template visibility on each company
 [product_tax_multicompany_default](product_tax_multicompany_default/) | 16.0.1.0.2 | <a href='https://github.com/Shide'><img src='https://github.com/Shide.png' width='32' height='32' style='border-radius:50%;' alt='Shide'/></a> | Product Tax Multi Company Default
+[project_multi_company](project_multi_company/) | 16.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | This module adds support for multi company on Project Module.
 [purchase_sale_container_deposit_inter_company](purchase_sale_container_deposit_inter_company/) | 16.0.1.0.2 |  | Add compatibility between OCA product_packaging_container_deposit and purchase_sale_inter_company
 [purchase_sale_inter_company](purchase_sale_inter_company/) | 16.0.1.1.3 |  | Intercompany PO/SO rules
 [purchase_sale_stock_inter_company](purchase_sale_stock_inter_company/) | 16.0.1.0.2 |  | Intercompany PO/SO rules with warehouse

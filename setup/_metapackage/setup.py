@@ -41,6 +41,7 @@ setuptools.setup(
         'odoo-addon-product_default_code_res_company_code>=16.0dev,<16.1dev',
         'odoo-addon-product_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-product_tax_multicompany_default>=16.0dev,<16.1dev',
+        'odoo-addon-project_multi_company>=16.0dev,<16.1dev',
         'odoo-addon-purchase_sale_container_deposit_inter_company>=16.0dev,<16.1dev',
         'odoo-addon-purchase_sale_inter_company>=16.0dev,<16.1dev',
         'odoo-addon-purchase_sale_stock_inter_company>=16.0dev,<16.1dev',
