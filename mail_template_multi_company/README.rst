@@ -48,7 +48,7 @@ Usage
 
 -  Go to *Settings*
 -  Activate the developer mode
--  Go to *Settings > Technical > Email > Templates*
+-  Go to *Settings > Technical > Email > Email Templates*
 -  Open a template and set the company field if the template is specific
    to a company
 
@@ -78,6 +78,9 @@ Contributors
 -  Andrea Stirpe <a.stirpe@onestein.nl>
 -  Alberto Nieto de Pablos <alberto.nieto@braintec.com>
    (https://braintec.com)
+-  `APSL-Nagarro <https://apsl.tech>`__:
+
+   -  Antoni Marroig <amarroig@apsl.net>
 
 Maintainers
 -----------
