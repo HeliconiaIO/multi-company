@@ -30,7 +30,7 @@ addon | version | maintainers | summary
 [product_multi_company](product_multi_company/) | 17.0.1.0.0 |  | Select individually the product template visibility on each company
 [product_tax_multicompany_default](product_tax_multicompany_default/) | 17.0.1.0.0 | <a href='https://github.com/Shide'><img src='https://github.com/Shide.png' width='32' height='32' style='border-radius:50%;' alt='Shide'/></a> | Product Tax Multi Company Default
 [purchase_sale_inter_company](purchase_sale_inter_company/) | 17.0.1.0.0 |  | Intercompany PO/SO rules
-[purchase_sale_stock_inter_company](purchase_sale_stock_inter_company/) | 17.0.1.0.0 |  | Intercompany PO/SO rules with warehouse
+[purchase_sale_stock_inter_company](purchase_sale_stock_inter_company/) | 17.0.1.0.1 |  | Intercompany PO/SO rules with warehouse
 
 [//]: # (end addons)
 
