@@ -166,3 +166,18 @@ class TestPartnerMultiCompany(common.TransactionCase):
             self.partner_company_none.with_user(self.user_company_1).read(["name"]),
             [{"id": self.partner_company_none.id, "name": "partner without company"}],
         )
+
+    def test_company_creation_with_users(self):
+        """When creating a new company with users,
+        the users and their partners are linked to the new company."""
+        admin_user = self.env.ref("base.user_admin")
+        company = self.env["res.company"].create(
+            {
+                "name": "Test company creation with users",
+                "user_ids": [
+                    (4, admin_user.id),
+                ],
+            }
+        )
+        self.assertIn(company, admin_user.company_ids)
+        self.assertIn(company, admin_user.partner_id.company_ids)

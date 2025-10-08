@@ -85,6 +85,9 @@ Contributors
   * Vicent Cubells <vicent.cubells@tecnativa.com>
 
 * Kitti Upariphutthiphong <kittiu@ecosoft.co.th>
+* `PyTech <https://www.pytech.it>`_:
+
+  * Simone Rubino <simone.rubino@pytech.it>
 
 Maintainers
 ~~~~~~~~~~~
