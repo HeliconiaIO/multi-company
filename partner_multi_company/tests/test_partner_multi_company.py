@@ -188,3 +188,15 @@ class TestPartnerMultiCompany(common.TransactionCase):
         companies = new_user.company_ids
         self.assertTrue(companies)
         self.assertIn(companies, new_user.partner_id.company_ids)
+
+    def test_assign_user_multi_companies(self):
+        """Multiple companies are assigned to the user,
+        check that partner companies are aligned."""
+        new_user = new_test_user(self.env, login="test_assign_user_multi_companies")
+        new_user.write(
+            {
+                "company_id": self.company_1.id,
+                "company_ids": [(4, self.company_1.id), (4, self.company_2.id)],
+            }
+        )
+        self.assertEqual(new_user.company_ids, new_user.partner_id.company_ids)

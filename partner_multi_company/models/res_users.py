@@ -18,7 +18,6 @@ class ResUsers(models.Model):
         return users
 
     def write(self, vals):
-        res = super(ResUsers, self.with_context(from_res_users=True)).write(vals)
         if "company_ids" in vals:
             for user in self.sudo():
                 new_company_ids = []
@@ -41,4 +40,4 @@ class ResUsers(models.Model):
             for user in self.sudo():
                 if user.partner_id.company_ids:
                     user.partner_id.company_ids = [(4, vals["company_id"])]
-        return res
+        return super(ResUsers, self.with_context(from_res_users=True)).write(vals)
