@@ -48,6 +48,7 @@ setuptools.setup(
         'odoo-addon-purchase_sale_inter_company>=16.0dev,<16.1dev',
         'odoo-addon-purchase_sale_stock_inter_company>=16.0dev,<16.1dev',
         'odoo-addon-purchase_sale_stock_inter_company_mrp>=16.0dev,<16.1dev',
+        'odoo-addon-res_company_access_all_children>=16.0dev,<16.1dev',
         'odoo-addon-res_company_active>=16.0dev,<16.1dev',
         'odoo-addon-res_company_category>=16.0dev,<16.1dev',
         'odoo-addon-res_company_code>=16.0dev,<16.1dev',
