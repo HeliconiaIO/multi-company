@@ -66,6 +66,7 @@ addon | version | maintainers | summary
 [res_company_category](res_company_category/) | 16.0.1.0.1 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Company Categories
 [res_company_code](res_company_code/) | 16.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Add 'code' field on company model
 [res_company_search_view](res_company_search_view/) | 16.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Add a search view for company model
+[res_partner_category_multi_company](res_partner_category_multi_company/) | 16.0.1.0.0 | <a href='https://github.com/legalsylvain'><img src='https://github.com/legalsylvain.png' width='32' height='32' style='border-radius:50%;' alt='legalsylvain'/></a> | Contact Tags - Multi Company
 [sale_partner_company](sale_partner_company/) | 16.0.1.0.0 |  | Set sale company from partner
 [sale_product_company](sale_product_company/) | 16.0.2.0.0 |  | Set selling companies on product
 [sale_product_company_multi_add](sale_product_company_multi_add/) | 16.0.1.0.0 |  | Filter products by selling companies on sale order multi add
